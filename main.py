@@ -1,5 +1,8 @@
 import streamlit as st
 from rag import generate_answer, process_urls
+import sys
+import pysqlite3
+sys.modules["sqlite3"] = pysqlite3
 
 # Set page configuration
 st.set_page_config(page_title="Smart URL Answer Bot", page_icon="🔗", layout="centered")
